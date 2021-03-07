@@ -1,0 +1,64 @@
+.plansScreen__plan {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+}
+
+.plansScreen__plan:hover {
+  filter: brightness(200%);
+}
+
+.plansScreen__info > h5 {
+  font-size: clamp(100%, 10px + 2vw, 24px);
+  font-weight: 600;
+}
+
+.plansScreen__info > h6 {
+  font-weight: 400;
+  max-width: 300px;
+  font-size: clamp(100%, 6px + 1vw, 24px);
+  line-height: 1.2rem;
+  padding-top: 6px;
+  color: gray;
+}
+
+.plansScreen__plan > button {
+  align-self: center;
+  padding: 5px 20px;
+  height: 30px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #e50914;
+  filter: brightness(50%);
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+/* Media Queries for Responsive Design */
+
+@media only screen and (max-width: 760px) {
+  .plansScreen__plan {
+    flex-direction: column;
+    align-items: center;
+    padding: 12px 0 0;
+  }
+
+  .plansScreen__plan > button {
+    margin-top: 14px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+}
+
+@media only screen and (max-width: 440px) {
+  .plansScreen__plan {
+    /* flex-direction: column; */
+    padding: 12px 0 0;
+  }
+
+  .plansScreen__plan > button {
+    margin-top: 8px;
+  }
+}

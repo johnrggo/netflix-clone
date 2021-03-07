@@ -1,0 +1,122 @@
+.profileScreen {
+  height: 100vh;
+  min-height: -webkit-fill-available;
+  color: white;
+}
+
+.profileScreen__body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 40px;
+  max-width: 800px;
+  min-width: 330px;
+}
+
+.profileScreen__body > h1 {
+  font-size: clamp(100%, 2rem + 2vw, 24px);
+  font-weight: 400;
+  border-bottom: 1px solid #282c2d;
+  margin-bottom: 20px;
+}
+
+.profileScreen__info {
+  display: flex;
+}
+
+.profileScreen__info > img {
+  width: 100%;
+  max-width: 80px;
+  height: auto;
+  align-self: flex-start;
+}
+
+.profileScreen__details {
+  color: white;
+  margin-left: 25px;
+  flex: 1;
+}
+
+.profileScreen__details > h2 {
+  background-color: gray;
+  padding: 15px;
+  font-size: clamp(100%, 4px + 2vw, 20px);
+  padding-left: 20px;
+}
+
+.profileScreen__plans {
+  margin-top: 20px;
+}
+
+.profileScreen--plansText {
+  font-size: clamp(100%, 1.5rem + 2vw, 24px);
+  font-weight: 400;
+  border-bottom: 1px solid #282c2d;
+  padding-bottom: 10px;
+}
+
+.profileScreen__signOut {
+  padding: 10px 10px;
+  font-size: 1rem;
+  margin-top: 10px;
+  width: 100%;
+  color: #fff;
+  background-color: #e50914;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+/* Media Queries for Responsive Design */
+
+@media only screen and (max-width: 760px) {
+  .profileScreen__body {
+    width: 80%;
+    font-size: medium;
+  }
+
+  .profileScreen--plansText {
+    text-align: center;
+  }
+
+  .profileScreen__plans {
+    position: relative;
+    left: -15%;
+  }
+
+  .profileScreen__signOut {
+    left: -15%;
+    margin-top: 5%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .profileScreen__body {
+    width: 92%;
+    font-size: small;
+  }
+
+  .profileScreen__plans {
+    position: relative;
+    left: -15%;
+  }
+
+  .profileScreen__signOut {
+    left: -15%;
+    margin-top: 8%;
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  .profileScreen__signOut {
+    position: absolute;
+    left: -6.5%;
+    margin-top: 5%;
+  }
+}
